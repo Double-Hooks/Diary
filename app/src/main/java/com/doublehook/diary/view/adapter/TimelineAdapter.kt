@@ -1,4 +1,4 @@
-package com.doublehook.diary.presenter
+package com.doublehook.diary.view.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +12,7 @@ class TimelineAdapter(private val items: ArrayList<Post>) :
     class ViewHolder(private val binding: ListitemPostBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(listener: View.OnClickListener, item: Post) {
-            //
+            binding.author.text = item.author
         }
     }
 
@@ -21,7 +21,9 @@ class TimelineAdapter(private val items: ArrayList<Post>) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding =
             ListitemPostBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return ViewHolder(binding)
+        return ViewHolder(
+            binding
+        )
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

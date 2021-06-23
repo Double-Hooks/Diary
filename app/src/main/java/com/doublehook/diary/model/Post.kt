@@ -1,5 +1,7 @@
 package com.doublehook.diary.model
 
-class Post {
+class Post (author: String) {
+    val author: String = author
+
 
 }

@@ -7,7 +7,7 @@
     tools:context=".view.TimelineActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/author"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
